@@ -10,14 +10,16 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
-            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Button Height="64" Margin="8" Grid.Column="0" Click="NewTransparentWindowButton_Click">
-            <TextBlock TextWrapping="Wrap">Launch New Transparent Window</TextBlock>
-        </Button>
-        <Button Height="64" Margin="8" Grid.Column="1" Click="NewWindowNotInTaskBarButton_Click">
-            <TextBlock TextWrapping="Wrap">Launch New Window Not In  TaskBar</TextBlock>
-        </Button>
+        <StackPanel Grid.Column="0">
+            <Button Height="64" Margin="8" Click="NewTransparentWindowButton_Click">
+                <TextBlock TextWrapping="Wrap">Launch New Transparent Window</TextBlock>
+            </Button>
+            <Button Height="64" Margin="8" Click="NewModalDialogWindowButton_Click">
+                <TextBlock TextWrapping="Wrap">Show Modal Window</TextBlock>
+            </Button>
+            <TextBlock x:Name="textBlock1"></TextBlock>
+        </StackPanel>
         <ListBox Name="Events" Margin="8" Grid.Column="2">
         </ListBox>
     </Grid>
